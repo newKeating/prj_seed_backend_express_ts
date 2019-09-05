@@ -8,8 +8,8 @@ const allResolvers: any = fileLoader(
   path.join(__dirname, "./api/**/*.resolvers.*")
 );
 
-const mergedTypes: any = mergeTypes(allTypes);
-const mergedResolvers: any = mergeResolvers(allResolvers);
+export const mergedTypes: any = mergeTypes(allTypes);
+export const mergedResolvers: any = mergeResolvers(allResolvers);
 
 const schema = makeExecutableSchema({
   typeDefs: mergedTypes,
